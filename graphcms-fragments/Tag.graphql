@@ -1,0 +1,14 @@
+fragment Tag on Tag {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  name
+  updates {
+    ... on Update {
+      remoteTypeName: __typename
+      remoteId: id
+    }
+  }
+}

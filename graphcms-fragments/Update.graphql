@@ -1,0 +1,21 @@
+fragment Update on Update {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  release {
+    ... on Release {
+      remoteTypeName: __typename
+      remoteId: id
+    }
+  }
+  description
+  url
+  tag {
+    ... on Tag {
+      remoteTypeName: __typename
+      remoteId: id
+    }
+  }
+}

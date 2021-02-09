@@ -1,0 +1,16 @@
+fragment Release on Release {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  title
+  slug
+  url
+  updates {
+    ... on Update {
+      remoteTypeName: __typename
+      remoteId: id
+    }
+  }
+}
